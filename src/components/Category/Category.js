@@ -24,6 +24,13 @@ const useStyles = makeStyles(theme => ({
     root2:{
         display:'flex'
     },
+    button: {
+        float:'left',
+        width:'100%',
+        height:50,
+        marginRight:'auto',
+        marginLeft:theme.spacing(1)
+    },
 }))
 export default function Category({chooseCategory,categoryName,submitCategory}) {
    
@@ -46,7 +53,7 @@ export default function Category({chooseCategory,categoryName,submitCategory}) {
       <option key={key} value={cat.number}>{cat.name}</option>
     ))}
 </Select>
-<Button  variant="contained" type='button' onClick={submitCategory} >Choose</Button>
+<Button color="primary" className={classes.button} type='button' onClick={submitCategory} >Choose</Button>
 
 </FormControl>
            </Grid>
