@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
     },
     root2:{
         display:'flex'
+    },
+    button:{
+        marginTop:10
     }
 }))
 export default function Category({chooseCategory,categoryName,submitCategory}) {
