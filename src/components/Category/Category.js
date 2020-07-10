@@ -53,9 +53,10 @@ export default function Category({chooseCategory,categoryName,submitCategory}) {
       <option key={key} value={cat.number}>{cat.name}</option>
     ))}
 </Select>
-<Button color="primary" className={classes.button} type='button' onClick={submitCategory} >Choose</Button>
 
 </FormControl>
+<Button variant="contained" className={classes.button} type='button' onClick={submitCategory} >Choose</Button>
+
            </Grid>
         </Grid>
     )
