@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Button ,FormControl, InputLabel,Select, Typography } from '@material-ui/core';
+import { Grid, Button ,FormControl, InputLabel,Select } from '@material-ui/core';
 import categorylist from '../../category.list.json'
 const useStyles = makeStyles(theme => ({
     root: {
@@ -24,9 +24,6 @@ const useStyles = makeStyles(theme => ({
     root2:{
         display:'flex'
     },
-    button:{
-        marginTop:10
-    }
 }))
 export default function Category({chooseCategory,categoryName,submitCategory}) {
    
@@ -42,13 +39,14 @@ export default function Category({chooseCategory,categoryName,submitCategory}) {
   native
   value={categoryName}
   onChange={chooseCategory}
+  
 >
   <option aria-label="None" value="" />
   {categorylist.map((cat,key)=>(
       <option key={key} value={cat.number}>{cat.name}</option>
     ))}
 </Select>
-<Button className={classes.button} variant="contained" type='button' onClick={submitCategory} >Choose</Button>
+<Button  variant="contained" type='button' onClick={submitCategory} >Choose</Button>
 
 </FormControl>
            </Grid>
