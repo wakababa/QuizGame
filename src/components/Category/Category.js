@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         width: '90%',
-        minWidth:325,
+        maxWidth:280,
         margınTop: '20px',
         marginLeft: 'auto',
         marginRight: 'auto',
