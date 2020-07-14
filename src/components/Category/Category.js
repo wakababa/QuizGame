@@ -56,7 +56,7 @@ export default function Category({chooseCategory,categoryName,submitCategory}) {
 
            </Grid>
            <Grid item xs={12}>
-           <Button variant="contained" className={classes.button} type='button' onClick={submitCategory} >Choose</Button>
+           <Button variant="contained" className={classes.button} type='button' onClick={submitCategory} >Submit</Button>
            </Grid>
         </Grid>
     )
