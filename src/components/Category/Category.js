@@ -24,15 +24,15 @@ const useStyles = makeStyles(theme => ({
       width: 300,
       margin: "auto",
       marginBottom: 5,
-      marginTop: '20%',
+      marginTop: '30%',
     },
     button: {
+        display:'block',
         width: '90%',
         maxWidth:280,
         margınTop: '20px',
         marginLeft: 'auto',
         marginRight: 'auto',
-        display: 'flex'
     },
 }))
 export default function Category({chooseCategory,categoryName,submitCategory}) {
