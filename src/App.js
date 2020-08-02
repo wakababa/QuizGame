@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-
-
 // COMPONENTS
 import Username from './components/Username/Username';
 import Category from './components/Category/Category';
@@ -82,12 +80,14 @@ function App() {
 
   return (
     <div className="App">
-      {userIsName && isSelectedCategory && !gameOver ? <GameScreen score={score} setscore={setscore} setgameOver={setgameOver} isopen={isopen} startGame={startGame} questions={questions} /> :
-     gameOver ? <GameOver score={score} newGame={newGame} gameOver={gameOver} userName={userName}/>:
-      userIsName ?
-      <Category submitCategory={submitCategory} categoryName={categoryName} chooseCategory={chooseCategory} />  :
-      <Username userError={userError} handleChangeUsername={handleChangeUsername} submitUsername={submitUsername} /> 
-      
+      {userIsName && isSelectedCategory && !gameOver ?
+        <GameScreen score={score} setscore={setscore} setgameOver={setgameOver} isopen={isopen} startGame={startGame} questions={questions} /> :
+       gameOver ?
+        <GameOver score={score} newGame={newGame} gameOver={gameOver} userName={userName}/>:
+       userIsName ?
+        <Category submitCategory={submitCategory} categoryName={categoryName} chooseCategory={chooseCategory} />  :
+        <Username userError={userError} handleChangeUsername={handleChangeUsername} submitUsername={submitUsername} />
+
       }
 
     </div>
