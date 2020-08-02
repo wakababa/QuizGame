@@ -20,8 +20,11 @@ const useStyles = makeStyles(theme => ({
         marginTop:'auto',
         height:theme.spacing(3),
     },
-    root2:{
-        display:'flex'
+    root3:{
+      width: 300,
+      margin: "auto",
+      marginBottom: 5,
+      marginTop: '20%',
     },
     button: {
         width: '90%',
@@ -33,20 +36,19 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 export default function Category({chooseCategory,categoryName,submitCategory}) {
-   
+
     const classes = useStyles();
     return (
         <Grid container className={classes.root}>
 
            <Grid className={classes.root2} item xs={12}>
-
-           <form className={classes.formControl}>
+<form className={classes.root3}>
 <InputLabel htmlFor="age-native-simple">Choose One Category</InputLabel>
 <Select
   native
   value={categoryName}
   onChange={chooseCategory}
-  
+
 >
   <option aria-label="None" value="" />
   {categorylist.map((cat,key)=>(
@@ -54,10 +56,8 @@ export default function Category({chooseCategory,categoryName,submitCategory}) {
     ))}
 </Select>
 </form>
+<Button variant="contained" className={classes.button} type='button' onClick={submitCategory} >Submit</Button>
 
-           </Grid>
-           <Grid item xs={12}>
-           <Button variant="contained" className={classes.button} type='button' onClick={submitCategory} >Submit</Button>
            </Grid>
         </Grid>
     )
